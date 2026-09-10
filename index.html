@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IIA — Russian-speaking Influencers Association</title>
-<meta name="description" data-i18n-content="meta_desc" content="Israel's first infrastructure for integrating Russian-speaking bloggers, entrepreneurs and their families.">
-<meta property="og:title" content="IIA — Russian-speaking Influencers Association">
+<title>IIA — Israel Influence Association</title>
+<meta name="description" data-i18n-content="meta_desc" content="Israel's first infrastructure for integrating bloggers and creative economy professionals into the country's government and business environment.">
+<meta property="og:title" content="IIA — Israel Influence Association">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://influenceisrael.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -51,6 +51,7 @@ a:hover{color:var(--accent)}
   repeating-linear-gradient(-45deg, rgba(20,20,20,0.05) 0 1px, transparent 1px 9px),
   #ECE7DC;display:flex;align-items:center;justify-content:center}
 .ph::after{content:attr(data-label);font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:rgba(20,20,20,0.4)}
+.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 .hdr{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:76px;border-bottom:1px solid var(--ink);position:relative;z-index:2;background:var(--bone);gap:16px}
 .logo{display:flex;align-items:center;gap:16px;flex:none}
@@ -75,6 +76,7 @@ a:hover{color:var(--accent)}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;color:var(--accent);margin-bottom:24px}
 h1{font-family:var(--display);font-size:104px;line-height:0.95;text-transform:uppercase;font-weight:600;margin:0}
 html.disp-he h1{font-weight:800;line-height:1.02}
+html.disp-ru h1{font-size:88px}
 .hero-main p{margin:40px 0 0;font-size:18px;line-height:1.75;max-width:56ch}
 .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
 .hero-cta .btn{padding:16px 30px;font-size:14px}
@@ -186,6 +188,7 @@ footer div{display:flex;gap:22px}
   .hero-main{padding:40px 20px 36px}
   .kicker{font-size:10px;letter-spacing:0.14em;margin-bottom:16px;overflow-wrap:break-word}
   h1{font-size:46px;overflow-wrap:anywhere}
+  html.disp-ru h1{font-size:38px}
   .hero-main p{margin:26px 0 0;font-size:15px;line-height:1.7;overflow-wrap:break-word}
   .need-title,.desk-note h3,.need-head h2,.ev-title,.crisis-note h3{overflow-wrap:break-word}
   .ev-row-l{min-width:0}
@@ -310,7 +313,7 @@ footer div{display:flex;gap:22px}
   </section>
 
   <div class="band">
-    <div class="ph" data-label="PHOTO"></div>
+    <div class="ph"><img src="assets/photos/hero.jpg" alt=""></div>
     <div class="band-cap">
       <span class="pl-num">PL. 01</span>
       <span class="pl-cap" data-i18n="band_cap"></span>
@@ -373,7 +376,7 @@ footer div{display:flex;gap:22px}
     </div>
     <div class="events-grid">
       <div class="ev">
-        <div class="ph" data-label="PHOTO"></div>
+        <div class="ph"><img src="assets/photos/ev1.jpg" alt="" loading="lazy"></div>
         <div class="ev-body">
           <div class="ev-date"><span class="ev-day">22</span><span class="ev-meta" data-i18n="ev1_meta"></span></div>
           <div class="ev-title" data-i18n="ev1_title"></div>
@@ -381,7 +384,7 @@ footer div{display:flex;gap:22px}
         </div>
       </div>
       <div class="ev">
-        <div class="ph" data-label="PHOTO"></div>
+        <div class="ph"><img src="assets/photos/ev2.jpg" alt="" loading="lazy"></div>
         <div class="ev-body">
           <div class="ev-date"><span class="ev-day">05</span><span class="ev-meta" data-i18n="ev2_meta"></span></div>
           <div class="ev-title" data-i18n="ev2_title"></div>
@@ -389,7 +392,7 @@ footer div{display:flex;gap:22px}
         </div>
       </div>
       <div class="ev">
-        <div class="ph" data-label="PHOTO"></div>
+        <div class="ph"><img src="assets/photos/ev3.jpg" alt="" loading="lazy"></div>
         <div class="ev-body">
           <div class="ev-date"><span class="ev-day">19</span><span class="ev-meta" data-i18n="ev3_meta"></span></div>
           <div class="ev-title" data-i18n="ev3_title"></div>
@@ -397,7 +400,7 @@ footer div{display:flex;gap:22px}
         </div>
       </div>
       <div class="ev">
-        <div class="ph" data-label="PHOTO"></div>
+        <div class="ph"><img src="assets/photos/ev4.jpg" alt="" loading="lazy"></div>
         <div class="ev-body">
           <div class="ev-date"><span class="ev-day">03</span><span class="ev-meta" data-i18n="ev4_meta"></span></div>
           <div class="ev-title" data-i18n="ev4_title"></div>
@@ -407,17 +410,17 @@ footer div{display:flex;gap:22px}
     </div>
     <div class="events-list">
       <div class="ev-row">
-        <div class="ev-row-l"><div class="ph"></div><span class="ev-day">22</span>
+        <div class="ev-row-l"><div class="ph"><img src="assets/photos/ev1.jpg" alt="" loading="lazy"></div><span class="ev-day">22</span>
           <div><div class="ev-meta" data-i18n="ev1_meta"></div><div class="ev-title" data-i18n="ev1_title"></div></div></div>
         <a href="#" class="btn btn-ink" data-i18n="ev_rsvp"></a>
       </div>
       <div class="ev-row">
-        <div class="ev-row-l"><div class="ph"></div><span class="ev-day">05</span>
+        <div class="ev-row-l"><div class="ph"><img src="assets/photos/ev2.jpg" alt="" loading="lazy"></div><span class="ev-day">05</span>
           <div><div class="ev-meta" data-i18n="ev2_meta"></div><div class="ev-title" data-i18n="ev2_title"></div></div></div>
         <a href="#" class="btn btn-line" data-i18n="ev_rsvp"></a>
       </div>
       <div class="ev-row">
-        <div class="ev-row-l"><div class="ph"></div><span class="ev-day">19</span>
+        <div class="ev-row-l"><div class="ph"><img src="assets/photos/ev3.jpg" alt="" loading="lazy"></div><span class="ev-day">19</span>
           <div><div class="ev-meta" data-i18n="ev3_meta"></div><div class="ev-title" data-i18n="ev3_title"></div></div></div>
         <a href="#" class="btn btn-line" data-i18n="ev_rsvp"></a>
       </div>
@@ -444,7 +447,7 @@ footer div{display:flex;gap:22px}
       </div>
     </div>
     <aside class="news-side">
-      <div class="ph" data-label="PHOTO"></div>
+      <div class="ph"><img src="assets/photos/members.jpg" alt="" loading="lazy"></div>
       <div class="news-side-cap">
         <span class="pl-num">PL. 02</span>
         <span class="pl-cap" data-i18n="join_cap"></span>
@@ -472,14 +475,14 @@ footer div{display:flex;gap:22px}
 <script>
 const I18N = {
   ru:{
-    meta_desc:"Первая в Израиле инфраструктура для адаптации русскоязычных блогеров, предпринимателей и их семей.",
-    title:"IIA — Ассоциация русскоязычных блогеров",
-    logo_sub:"Ассоциация<br>русскоязычных блогеров",
+    meta_desc:"Первая в Израиле инфраструктура для адаптации блогеров и представителей креативной экономики в израильской государственной и бизнес-среде.",
+    title:"IIA — Israel Influence Association",
+    logo_sub:"Israel Influence<br>Association",
     nav_about:"Кто мы", nav_mission:"Миссия", nav_membership:"Членство", nav_events:"События", nav_media:"Медиа", nav_partners:"Партнёрам",
     btn_partners:"Партнёрам", btn_join:"Вступить",
-    kicker:"Ассоциация русскоязычных блогеров, предпринимателей и творческих людей",
-    h1:"Дом для<br>русскоязычных<br>блогеров",
-    lead:"Первая в Израиле инфраструктура для адаптации русскоязычных блогеров, предпринимателей и их семей в израильской бизнес-среде — и для честного голоса об Израиле в мире.",
+    kicker:"Ассоциация блогеров и представителей креативной экономики",
+    h1:"Представительство.<br>Защита.<br>Стандарты.<br>Влияние.",
+    lead:"Первая в Израиле инфраструктура для адаптации блогеров и представителей креативной экономики в израильской государственной и бизнес-среде.",
     cta_join:"Вступить в ассоциацию", cta_mission:"О миссии",
     side1_label:"СЕЙЧАС В РАБОТЕ", side1_text:"Роадмап и сопровождение заявок в крупнейшие израильские фонды поддержки.", side1_link:"Подробнее →",
     side2_label:"СОЦИАЛЬНАЯ ПОДДЕРЖКА", side2_text:"Вопросы с министерствами и мэриями — решаем на уровне сообщества.",
@@ -487,7 +490,7 @@ const I18N = {
     band_cap:"Встреча сообщества, Тель-Авив — 2026 [placeholder]",
     need_title:"Что даёт членство", need_sub:"СОЦИАЛЬНОЕ И БИЗНЕС — В ОДНОМ СООБЩЕСТВЕ",
     s1_num:"Nº01 — СОЦИАЛЬНОЕ", s1_title:"Социальные вопросы", s1_desc:"Поддержка блогеров и СМИ, выход на правительство, министерства и мэрии городов.",
-    s2_num:"Nº02 — ФИНАНСЫ", s2_title:"Гранты и фонды", s2_desc:"Роадмап и сопровождение для помощи от крупнейших израильских фондов (пример: Zooz).",
+    s2_num:"Nº02 — ФИНАНСЫ", s2_title:"Гранты и фонды", s2_desc:"Роадмап и сопровождение для помощи от крупнейших израильских фондов.",
     s3_num:"Nº03 — ЭКСПЕРТЫ", s3_title:"Консалтинг", s3_desc:"Юристы, финансисты и бизнес-консультанты для членов ассоциации.",
     s4_num:"Nº04 — БИЗНЕС", s4_title:"Бизнес-мэтчинг", s4_desc:"Приоритетный доступ к рекламным бюджетам партнёров и кампаниям от заказчиков.",
     s5_num:"Nº05 — СООБЩЕСТВО", s5_title:"Нетворкинг и события", s5_desc:"Ивенты, лидеры рынка, VIP-доступ к CardBook и встречи в Кнессете.",
@@ -505,18 +508,18 @@ const I18N = {
     why2_tag:"БОЛЬ", why2_text:"В мире нет сильного русскоязычного медиа, чтобы честно говорить об Израиле.",
     why3_tag:"МИССИЯ", why3_text:"Через поддержку блогеров развивать своё медиа и честный голос об Израиле.",
     join_label:"ЕЩЁ НЕ С НАМИ?", join_big:"Сообщество уже растёт.", join_btn:"Вступить в ассоциацию →", join_cap:"Сообщество, 2026 [placeholder]",
-    strip_text:"Вы русскоязычный блогер или предприниматель в Израиле? Ваше место — здесь.", strip_btn:"Вступить →",
-    foot_copy:"© 2026 IIA — Ассоциация русскоязычных блогеров", foot_charter:"Устав", foot_contact:"Контакты", foot_partners:"Партнёрам"
+    strip_text:"Вы блогер или представитель креативной экономики в Израиле? Ваше место — здесь.", strip_btn:"Вступить →",
+    foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"Устав", foot_contact:"Контакты", foot_partners:"Партнёрам"
   },
   he:{
-    meta_desc:"התשתית הראשונה בישראל לקליטת בלוגרים ויזמים דוברי רוסית ובני משפחותיהם.",
-    title:"IIA — איגוד הבלוגרים דוברי הרוסית",
-    logo_sub:"איגוד הבלוגרים<br>דוברי הרוסית",
+    meta_desc:"התשתית הראשונה בישראל לקליטת בלוגרים ונציגי הכלכלה היצירתית בסביבה הממשלתית והעסקית בישראל.",
+    title:"IIA — Israel Influence Association",
+    logo_sub:"Israel Influence<br>Association",
     nav_about:"מי אנחנו", nav_mission:"חזון", nav_membership:"חברוּת", nav_events:"אירועים", nav_media:"מדיה", nav_partners:"שותפים",
     btn_partners:"שותפים", btn_join:"הצטרפות",
-    kicker:"איגוד הבלוגרים, היזמים והיוצרים דוברי הרוסית",
-    h1:"בית<br>לבלוגרים<br>דוברי הרוסית",
-    lead:"התשתית הראשונה בישראל לקליטת בלוגרים ויזמים דוברי רוסית ובני משפחותיהם בסביבה העסקית בישראל — ולקול כן ואמיתי על ישראל בעולם.",
+    kicker:"איגוד הבלוגרים ונציגי הכלכלה היצירתית",
+    h1:"ייצוג.<br>הגנה.<br>סטנדרטים.<br>השפעה.",
+    lead:"התשתית הראשונה בישראל לקליטת בלוגרים ונציגי הכלכלה היצירתית בסביבה הממשלתית והעסקית בישראל.",
     cta_join:"להצטרף לאיגוד", cta_mission:"על החזון",
     side1_label:"על שולחן העבודה", side1_text:"מפת דרכים וליווי בקשות לקרנות התמיכה הגדולות בישראל.", side1_link:"← עוד",
     side2_label:"תמיכה חברתית", side2_text:"פנייה למשרדי ממשלה ולעיריות — פתרון ברמת הקהילה.",
@@ -524,7 +527,7 @@ const I18N = {
     band_cap:"מפגש קהילה, תל אביב — 2026 [placeholder]",
     need_title:"מה נותנת החברוּת", need_sub:"חברתי ועסקי — בקהילה אחת",
     s1_num:"Nº01 — חברתי", s1_title:"עניינים חברתיים", s1_desc:"גיבוי מבלוגרים ותקשורת, נגישות לממשלה, למשרדים ולעיריות.",
-    s2_num:"Nº02 — מימון", s2_title:"מענקים וקרנות", s2_desc:"מפת דרכים וליווי לקבלת סיוע מהקרנות הגדולות בישראל (לדוגמה: Zooz).",
+    s2_num:"Nº02 — מימון", s2_title:"מענקים וקרנות", s2_desc:"מפת דרכים וליווי לקבלת סיוע מהקרנות הגדולות בישראל.",
     s3_num:"Nº03 — מומחים", s3_title:"ייעוץ", s3_desc:"עורכי דין, אנשי כספים ויועצים עסקיים לחברי האיגוד.",
     s4_num:"Nº04 — עסקים", s4_title:"התאמות עסקיות", s4_desc:"גישה מועדפת לתקציבי פרסום של שותפים ולקמפיינים ממזמינים.",
     s5_num:"Nº05 — קהילה", s5_title:"נטוורקינג ואירועים", s5_desc:"אירועים, מובילי שוק, גישת VIP ל-CardBook ומפגשים בכנסת.",
@@ -542,18 +545,18 @@ const I18N = {
     why2_tag:"כאב", why2_text:"אין בעולם מדיה חזקה בשפה הרוסית שתספר את האמת על ישראל.",
     why3_tag:"חזון", why3_text:"דרך תמיכה בבלוגרים לפתח מדיה משלנו וקול כן על ישראל.",
     join_label:"עוד לא איתנו?", join_big:"הקהילה כבר גדלה.", join_btn:"← להצטרף לאיגוד", join_cap:"הקהילה, 2026 [placeholder]",
-    strip_text:"אתם בלוגרים או יזמים דוברי רוסית בישראל? המקום שלכם כאן.", strip_btn:"← הצטרפות",
-    foot_copy:"© 2026 IIA — איגוד הבלוגרים דוברי הרוסית", foot_charter:"תקנון", foot_contact:"צור קשר", foot_partners:"שותפים"
+    strip_text:"אתם בלוגרים או אנשי הכלכלה היצירתית בישראל? המקום שלכם כאן.", strip_btn:"← הצטרפות",
+    foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"תקנון", foot_contact:"צור קשר", foot_partners:"שותפים"
   },
   en:{
-    meta_desc:"Israel's first infrastructure for integrating Russian-speaking bloggers, entrepreneurs and their families.",
-    title:"IIA — Russian-speaking Influencers Association",
-    logo_sub:"Russian-speaking<br>Influencers Assoc.",
+    meta_desc:"Israel's first infrastructure for integrating bloggers and creative economy professionals into the country's government and business environment.",
+    title:"IIA — Israel Influence Association",
+    logo_sub:"Israel Influence<br>Association",
     nav_about:"About", nav_mission:"Mission", nav_membership:"Membership", nav_events:"Events", nav_media:"Media", nav_partners:"Partners",
     btn_partners:"Partners", btn_join:"Join",
-    kicker:"Association of Russian-speaking bloggers, entrepreneurs and creators",
-    h1:"A home for<br>Russian-speaking<br>creators",
-    lead:"Israel's first infrastructure for integrating Russian-speaking bloggers, entrepreneurs and their families into the local business world — and for an honest voice about Israel abroad.",
+    kicker:"The association of bloggers and the creative economy",
+    h1:"Representation.<br>Protection.<br>Standards.<br>Influence.",
+    lead:"Israel's first infrastructure for integrating bloggers and creative economy professionals into the country's government and business environment.",
     cta_join:"Join the association", cta_mission:"Our mission",
     side1_label:"ON THE DESK", side1_text:"Roadmaps and application support for Israel's largest support funds.", side1_link:"Read more →",
     side2_label:"SOCIAL SUPPORT", side2_text:"Ministries and municipalities — resolved at the community level.",
@@ -561,7 +564,7 @@ const I18N = {
     band_cap:"Community meetup, Tel Aviv — 2026 [placeholder]",
     need_title:"What membership gives", need_sub:"SOCIAL AND BUSINESS — IN ONE COMMUNITY",
     s1_num:"Nº01 — SOCIAL", s1_title:"Social issues", s1_desc:"Backing from bloggers and media, access to government, ministries and city halls.",
-    s2_num:"Nº02 — FUNDING", s2_title:"Grants & funds", s2_desc:"Roadmap and support for aid from Israel's largest funds (e.g. Zooz).",
+    s2_num:"Nº02 — FUNDING", s2_title:"Grants & funds", s2_desc:"Roadmap and support for aid from Israel's largest funds.",
     s3_num:"Nº03 — EXPERTS", s3_title:"Consulting", s3_desc:"Lawyers, finance and business consultants for members.",
     s4_num:"Nº04 — BUSINESS", s4_title:"Business matching", s4_desc:"Priority access to partners' ad budgets and client campaigns.",
     s5_num:"Nº05 — COMMUNITY", s5_title:"Networking & events", s5_desc:"Events, market leaders, VIP CardBook access and Knesset meetings.",
@@ -579,8 +582,8 @@ const I18N = {
     why2_tag:"PAIN", why2_text:"There is no strong Russian-language media to honestly speak about Israel.",
     why3_tag:"MISSION", why3_text:"Through supporting bloggers, build our own media and an honest voice about Israel.",
     join_label:"NOT A MEMBER YET?", join_big:"The community is already growing.", join_btn:"Join the association →", join_cap:"Community, 2026 [placeholder]",
-    strip_text:"A Russian-speaking blogger or entrepreneur in Israel? This is your place.", strip_btn:"Join now →",
-    foot_copy:"© 2026 IIA — Russian-speaking Influencers Association", foot_charter:"Charter", foot_contact:"Contact", foot_partners:"Partners"
+    strip_text:"A blogger or creative economy professional in Israel? This is your place.", strip_btn:"Join now →",
+    foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"Charter", foot_contact:"Contact", foot_partners:"Partners"
   }
 };
 
