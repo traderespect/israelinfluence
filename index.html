@@ -137,6 +137,20 @@ html.disp-ru h1{font-size:88px}
 .ev-title{font-size:16px;line-height:1.45}
 .ev .btn{margin-top:auto;width:fit-content;padding:12px 20px;font-size:12px}
 .events-list{display:none}
+.events:not(.open) .events-grid,.events:not(.open) .events-list{display:none}
+
+/* upcoming events: hero-side block (desktop) + header strip (mobile) */
+.up-strip{display:none;align-items:center;gap:6px 14px;padding:10px 20px;border-bottom:1px solid var(--ink);background:var(--bone);position:relative;z-index:2;font-size:14px;flex-wrap:wrap;color:var(--ink)}
+.up-strip .lbl{font-family:var(--mono);font-size:10px;letter-spacing:0.16em;color:var(--accent)}
+.up-strip b{font-family:var(--serif);font-weight:500;font-size:16px}
+.up-strip .meta{font-family:var(--mono);font-size:10px;color:rgba(20,20,20,.55);letter-spacing:.08em}
+.up-strip .cal{font-size:12px;border-bottom:1px solid var(--ink);margin-inline-start:auto}
+.up-side{padding:24px 32px;flex:1;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.up-side .up-ev{display:flex;gap:14px;align-items:baseline}
+.up-side .d{font-family:var(--serif);font-size:34px;line-height:1}
+.up-side .m{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:rgba(20,20,20,.55)}
+.up-side .t{display:block;font-size:14px;margin-top:3px}
+.up-side .all{font-size:12px;border-bottom:1px solid var(--ink);width:fit-content;margin-top:4px}
 
 .news{display:grid;grid-template-columns:1fr 420px;border-bottom:1px solid var(--ink)}
 .news-main{padding:44px 40px}
@@ -184,6 +198,8 @@ footer div{display:flex;gap:22px}
   .logo-name{font-size:9px;padding-inline-start:10px}
   .btn-help{padding:8px 12px;font-family:var(--mono);font-size:10px}
 
+  .up-strip{display:flex}
+  .up-side{display:none}
   .hero{grid-template-columns:1fr}
   .hero-main{padding:40px 20px 36px}
   .kicker{font-size:10px;letter-spacing:0.14em;margin-bottom:16px;overflow-wrap:break-word}
@@ -274,6 +290,13 @@ footer div{display:flex;gap:22px}
     </div>
   </header>
 
+  <a class="up-strip" href="#events">
+    <span class="lbl"><span class="diamond"></span><span data-i18n="upc_next"></span></span>
+    <b data-i18n="ev1_title"></b>
+    <span class="meta" data-i18n="upcA_meta"></span>
+    <span class="cal" data-i18n="ev_all"></span>
+  </a>
+
   <div class="m-menu" role="dialog" aria-label="Menu">
     <button class="m-close" aria-label="Close" onclick="document.querySelector('.m-menu').classList.remove('open')">✕</button>
     <a href="#about" data-i18n="nav_about" onclick="closeMenu()"></a>
@@ -308,7 +331,12 @@ footer div{display:flex;gap:22px}
         <div class="side-label" data-i18n="side2_label"></div>
         <h3 data-i18n="side2_text"></h3>
       </div>
-      <div class="quote"><p data-i18n="side_quote"></p></div>
+      <div class="up-side">
+        <div class="side-label" data-i18n="upc_label"></div>
+        <a class="up-ev" href="#events"><span class="d">22</span><span><span class="m" data-i18n="upc1_meta"></span><span class="t" data-i18n="ev1_title"></span></span></a>
+        <a class="up-ev" href="#events"><span class="d">05</span><span><span class="m" data-i18n="upc2_meta"></span><span class="t" data-i18n="ev2_title"></span></span></a>
+        <a class="all" href="#events" data-i18n="ev_all"></a>
+      </div>
     </aside>
   </section>
 
@@ -372,7 +400,7 @@ footer div{display:flex;gap:22px}
   <section class="events" id="events">
     <div class="events-head">
       <h2 data-i18n="ev_title"></h2>
-      <a href="#events" data-i18n="ev_all"></a>
+      <a href="#events" id="evToggle" data-i18n="ev_all"></a>
     </div>
     <div class="events-grid">
       <div class="ev">
@@ -503,6 +531,7 @@ const I18N = {
     ev2_meta:"АВГ · 18:00<br>ОНЛАЙН", ev2_title:"Встреча с фондами",
     ev3_meta:"АВГ · 10:00<br>ИЕРУСАЛИМ", ev3_title:"День в Кнессете",
     ev4_meta:"СЕН · 19:30<br>ХАЙФА", ev4_title:"Медиа-воркшоп",
+    upc_label:"БЛИЖАЙШИЕ СОБЫТИЯ", upc_next:"БЛИЖАЙШЕЕ СОБЫТИЕ", upcA_meta:"22 ИЮЛ · 19:00 · ТЕЛЬ-АВИВ", upc1_meta:"ИЮЛ · 19:00 · ТЕЛЬ-АВИВ", upc2_meta:"АВГ · 18:00 · ОНЛАЙН", ev_hide:"Свернуть ↑",
     why_label:"МИССИЯ И БОЛЬ", why_all:"О нас →",
     why1_tag:"БОЛЬ", why1_text:"Государство не дало дом русскоязычным предпринимателям и их семьям.",
     why2_tag:"БОЛЬ", why2_text:"В мире нет сильного русскоязычного медиа, чтобы честно говорить об Израиле.",
@@ -540,6 +569,7 @@ const I18N = {
     ev2_meta:"אוג׳ · 18:00<br>אונליין", ev2_title:"מפגש עם קרנות",
     ev3_meta:"אוג׳ · 10:00<br>ירושלים", ev3_title:"יום בכנסת",
     ev4_meta:"ספט׳ · 19:30<br>חיפה", ev4_title:"סדנת מדיה",
+    upc_label:"אירועים קרובים", upc_next:"האירוע הקרוב", upcA_meta:"22 ביולי · 19:00 · תל אביב", upc1_meta:"יולי · 19:00 · תל אביב", upc2_meta:"אוג׳ · 18:00 · אונליין", ev_hide:"↑ לסגור",
     why_label:"חזון וכאב", why_all:"← עלינו",
     why1_tag:"כאב", why1_text:"המדינה לא נתנה בית ליזמים דוברי הרוסית ולמשפחותיהם.",
     why2_tag:"כאב", why2_text:"אין בעולם מדיה חזקה בשפה הרוסית שתספר את האמת על ישראל.",
@@ -577,6 +607,7 @@ const I18N = {
     ev2_meta:"AUG · 18:00<br>ONLINE", ev2_title:"Meet the funds",
     ev3_meta:"AUG · 10:00<br>JERUSALEM", ev3_title:"A day at the Knesset",
     ev4_meta:"SEP · 19:30<br>HAIFA", ev4_title:"Media workshop",
+    upc_label:"UPCOMING EVENTS", upc_next:"NEXT EVENT", upcA_meta:"JUL 22 · 19:00 · TEL AVIV", upc1_meta:"JUL · 19:00 · TEL AVIV", upc2_meta:"AUG · 18:00 · ONLINE", ev_hide:"Collapse ↑",
     why_label:"MISSION & PAIN", why_all:"About us →",
     why1_tag:"PAIN", why1_text:"The state has not given a home to Russian-speaking entrepreneurs and their families.",
     why2_tag:"PAIN", why2_text:"There is no strong Russian-language media to honestly speak about Israel.",
@@ -620,6 +651,32 @@ document.querySelectorAll('.lang a').forEach(a=>{
   try{ const s=localStorage.getItem('iia-lang'); if(s) lang=s; }catch(e){}
   setLang(lang);
 })();
+
+function syncEvToggle(){
+  const s=document.getElementById('events'), t=document.getElementById('evToggle');
+  if(!s||!t) return;
+  t.setAttribute('data-i18n', s.classList.contains('open')?'ev_hide':'ev_all');
+  const dict=I18N[document.documentElement.lang]||I18N.en;
+  t.innerHTML=dict[t.getAttribute('data-i18n')];
+}
+function expandEvents(e){
+  if(e) e.preventDefault();
+  const s=document.getElementById('events');
+  s.classList.add('open'); syncEvToggle();
+  s.scrollIntoView({behavior:'smooth'});
+}
+document.querySelectorAll('a[href="#events"]').forEach(a=>{
+  if(a.id==='evToggle'){
+    a.addEventListener('click',ev=>{
+      ev.preventDefault();
+      const s=document.getElementById('events');
+      s.classList.toggle('open'); syncEvToggle();
+      if(s.classList.contains('open')) s.scrollIntoView({behavior:'smooth'});
+    });
+  } else {
+    a.addEventListener('click',expandEvents);
+  }
+});
 </script>
 </body>
 </html>
