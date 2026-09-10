@@ -28,8 +28,8 @@ html.disp-en{--display:'Six Caps','Arial Narrow',sans-serif}
 html.disp-ru{--display:'Oswald','Arial Narrow',sans-serif}
 html.disp-he{--display:'Heebo',Arial,sans-serif;--serif:'Frank Ruhl Libre',Georgia,serif;--body:'Heebo',Arial,sans-serif}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body)}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);overflow-x:hidden;max-width:100%}
 a{color:inherit;text-decoration:none}
 a:hover{color:var(--accent)}
 ::selection{background:var(--accent);color:var(--bone)}
@@ -162,7 +162,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 footer div{display:flex;gap:22px}
 
 @media (max-width:900px){
-  .hdr nav,.hdr .btn-member{display:none}
+  .hdr nav,.hdr .btn-member,.hdr-cta .lang,.hdr-cta .btn-help{display:none}
   .burger{display:inline-flex}
   .m-menu.open{display:flex;position:fixed;inset:0;z-index:50;background:var(--bone);flex-direction:column;padding:24px 20px;gap:6px;overflow:auto}
   .m-menu .m-close{align-self:flex-end;border:1px solid var(--ink);min-width:44px;min-height:44px;background:none;font-size:16px;cursor:pointer;color:var(--ink)}
@@ -184,9 +184,11 @@ footer div{display:flex;gap:22px}
 
   .hero{grid-template-columns:1fr}
   .hero-main{padding:40px 20px 36px}
-  .kicker{font-size:10px;letter-spacing:0.14em;margin-bottom:16px}
-  h1{font-size:52px}
-  .hero-main p{margin:26px 0 0;font-size:15px;line-height:1.7}
+  .kicker{font-size:10px;letter-spacing:0.14em;margin-bottom:16px;overflow-wrap:break-word}
+  h1{font-size:46px;overflow-wrap:anywhere}
+  .hero-main p{margin:26px 0 0;font-size:15px;line-height:1.7;overflow-wrap:break-word}
+  .need-title,.desk-note h3,.need-head h2,.ev-title,.crisis-note h3{overflow-wrap:break-word}
+  .ev-row-l{min-width:0}
   .hero-cta{flex-direction:column;gap:10px;margin-top:26px}
   .hero-cta .btn{padding:15px 22px;font-size:13px}
   .hero-side{border-inline-start:none;border-top:1px solid var(--ink)}
