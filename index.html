@@ -152,6 +152,18 @@ html.disp-ru h1{font-size:88px}
 .up-side .t{display:block;font-size:14px;margin-top:3px}
 .up-side .all{font-size:12px;border-bottom:1px solid var(--ink);width:fit-content;margin-top:4px}
 
+/* mission manifesto */
+.mi{border-bottom:1px solid var(--ink);position:relative;z-index:2}
+.mi .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;display:block;padding:44px 40px 0}
+.mi-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;padding:28px 40px 56px;align-items:end}
+.mi-word{font-family:var(--display);font-size:96px;line-height:.95;text-transform:uppercase;font-weight:600}
+html.disp-he .mi-word{font-weight:800;line-height:1.02}
+.mi-items{display:flex;flex-direction:column}
+.mi-item{display:flex;gap:24px;padding:22px 0;border-top:1px solid var(--hair);align-items:baseline}
+.mi-item:first-child{border-top:none}
+.mi-item .n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--accent);white-space:nowrap}
+.mi-item p{margin:0;font-family:var(--serif);font-size:25px;line-height:1.4}
+
 .news{display:grid;grid-template-columns:1fr 420px;border-bottom:1px solid var(--ink)}
 .news-main{padding:44px 40px}
 .news-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;gap:16px}
@@ -250,6 +262,11 @@ footer div{display:flex;gap:22px}
   .ev-row .ev-title{font-size:14px;line-height:1.4;margin-top:4px}
   .ev-row .btn{padding:12px 14px;font-size:11px;white-space:nowrap}
 
+  .mi .lbl{padding:26px 20px 0}
+  .mi-grid{grid-template-columns:1fr;gap:18px;padding:14px 20px 30px}
+  .mi-word{font-size:44px}
+  .mi-item{gap:14px;padding:16px 0}
+  .mi-item p{font-size:19px}
   .news{grid-template-columns:1fr}
   .news-main{padding:28px 20px}
   .news-head{margin-bottom:14px}
@@ -280,7 +297,7 @@ footer div{display:flex;gap:22px}
       <span class="logo-name" data-i18n="logo_sub"></span>
     </a>
     <nav aria-label="Main">
-      <a href="#about" data-i18n="nav_about"></a><a href="#mission" data-i18n="nav_mission"></a><a href="#membership" data-i18n="nav_membership"></a><a href="#events" data-i18n="nav_events"></a><a href="#mission" data-i18n="nav_media"></a><a href="#partners" data-i18n="nav_partners"></a>
+      <a href="#about" data-i18n="nav_about"></a><a href="#mission" data-i18n="nav_mission"></a><a href="#membership" data-i18n="nav_membership"></a><a href="#events" data-i18n="nav_events"></a><a href="#media" data-i18n="nav_media"></a><a href="#partners" data-i18n="nav_partners"></a>
     </nav>
     <div class="hdr-cta">
       <span class="lang"><a data-lang="ru">RU</a> · <a data-lang="he">HE</a> · <a data-lang="en">EN</a></span>
@@ -347,6 +364,17 @@ footer div{display:flex;gap:22px}
       <span class="pl-cap" data-i18n="band_cap"></span>
     </div>
   </div>
+
+  <section class="mi" id="mission">
+    <span class="lbl"><span class="diamond"></span><span data-i18n="mi_label"></span></span>
+    <div class="mi-grid">
+      <div class="mi-word" data-i18n="mi_word"></div>
+      <div class="mi-items">
+        <div class="mi-item"><span class="n" data-i18n="mi1_num"></span><p data-i18n="mi1_text"></p></div>
+        <div class="mi-item"><span class="n" data-i18n="mi2_num"></span><p data-i18n="mi2_text"></p></div>
+      </div>
+    </div>
+  </section>
 
   <section class="need" id="membership">
     <div class="need-head">
@@ -455,7 +483,7 @@ footer div{display:flex;gap:22px}
     </div>
   </section>
 
-  <section class="news" id="mission">
+  <section class="news" id="media">
     <div class="news-main">
       <div class="news-head">
         <span class="mono"><span class="diamond"></span><span data-i18n="why_label"></span></span>
@@ -468,10 +496,6 @@ footer div{display:flex;gap:22px}
       <div class="news-row">
         <span class="news-date" data-i18n="why2_tag"></span>
         <span data-i18n="why2_text"></span>
-      </div>
-      <div class="news-row">
-        <span class="news-date" data-i18n="why3_tag"></span>
-        <span data-i18n="why3_text"></span>
       </div>
     </div>
     <aside class="news-side">
@@ -532,10 +556,12 @@ const I18N = {
     ev3_meta:"АВГ · 10:00<br>ИЕРУСАЛИМ", ev3_title:"День в Кнессете",
     ev4_meta:"СЕН · 19:30<br>ХАЙФА", ev4_title:"Медиа-воркшоп",
     upc_label:"БЛИЖАЙШИЕ СОБЫТИЯ", upc_next:"БЛИЖАЙШЕЕ СОБЫТИЕ", upcA_meta:"22 ИЮЛ · 19:00 · ТЕЛЬ-АВИВ", upc1_meta:"ИЮЛ · 19:00 · ТЕЛЬ-АВИВ", upc2_meta:"АВГ · 18:00 · ОНЛАЙН", ev_hide:"Свернуть ↑",
-    why_label:"МИССИЯ И БОЛЬ", why_all:"О нас →",
+    mi_label:"МИССИЯ", mi_word:"Наша<br>миссия", mi1_num:"М·01", mi2_num:"М·02",
+    mi1_text:"Создание инфраструктуры для адаптации блогеров и представителей креативной экономики в израильской государственной и бизнес-среде.",
+    mi2_text:"Популяризация Израиля среди представителей мировой креативной экономики.",
+    why_label:"БОЛЬ", why_all:"О нас →",
     why1_tag:"БОЛЬ", why1_text:"Государство не дало дом русскоязычным предпринимателям и их семьям.",
     why2_tag:"БОЛЬ", why2_text:"В мире нет сильного русскоязычного медиа, чтобы честно говорить об Израиле.",
-    why3_tag:"МИССИЯ", why3_text:"Через поддержку блогеров развивать своё медиа и честный голос об Израиле.",
     join_label:"ЕЩЁ НЕ С НАМИ?", join_big:"Сообщество уже растёт.", join_btn:"Вступить в ассоциацию →", join_cap:"Сообщество, 2026 [placeholder]",
     strip_text:"Вы блогер или представитель креативной экономики в Израиле? Ваше место — здесь.", strip_btn:"Вступить →",
     foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"Устав", foot_contact:"Контакты", foot_partners:"Партнёрам"
@@ -570,10 +596,12 @@ const I18N = {
     ev3_meta:"אוג׳ · 10:00<br>ירושלים", ev3_title:"יום בכנסת",
     ev4_meta:"ספט׳ · 19:30<br>חיפה", ev4_title:"סדנת מדיה",
     upc_label:"אירועים קרובים", upc_next:"האירוע הקרוב", upcA_meta:"22 ביולי · 19:00 · תל אביב", upc1_meta:"יולי · 19:00 · תל אביב", upc2_meta:"אוג׳ · 18:00 · אונליין", ev_hide:"↑ לסגור",
-    why_label:"חזון וכאב", why_all:"← עלינו",
+    mi_label:"חזון", mi_word:"החזון<br>שלנו", mi1_num:"M·01", mi2_num:"M·02",
+    mi1_text:"בניית תשתית לקליטת בלוגרים ונציגי הכלכלה היצירתית בסביבה הממשלתית והעסקית בישראל.",
+    mi2_text:"קידום ישראל בקרב הכלכלה היצירתית העולמית.",
+    why_label:"כאב", why_all:"← עלינו",
     why1_tag:"כאב", why1_text:"המדינה לא נתנה בית ליזמים דוברי הרוסית ולמשפחותיהם.",
     why2_tag:"כאב", why2_text:"אין בעולם מדיה חזקה בשפה הרוסית שתספר את האמת על ישראל.",
-    why3_tag:"חזון", why3_text:"דרך תמיכה בבלוגרים לפתח מדיה משלנו וקול כן על ישראל.",
     join_label:"עוד לא איתנו?", join_big:"הקהילה כבר גדלה.", join_btn:"← להצטרף לאיגוד", join_cap:"הקהילה, 2026 [placeholder]",
     strip_text:"אתם בלוגרים או אנשי הכלכלה היצירתית בישראל? המקום שלכם כאן.", strip_btn:"← הצטרפות",
     foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"תקנון", foot_contact:"צור קשר", foot_partners:"שותפים"
@@ -608,10 +636,12 @@ const I18N = {
     ev3_meta:"AUG · 10:00<br>JERUSALEM", ev3_title:"A day at the Knesset",
     ev4_meta:"SEP · 19:30<br>HAIFA", ev4_title:"Media workshop",
     upc_label:"UPCOMING EVENTS", upc_next:"NEXT EVENT", upcA_meta:"JUL 22 · 19:00 · TEL AVIV", upc1_meta:"JUL · 19:00 · TEL AVIV", upc2_meta:"AUG · 18:00 · ONLINE", ev_hide:"Collapse ↑",
-    why_label:"MISSION & PAIN", why_all:"About us →",
+    mi_label:"MISSION", mi_word:"Our<br>mission", mi1_num:"M·01", mi2_num:"M·02",
+    mi1_text:"Building the infrastructure that integrates bloggers and creative economy professionals into Israel's government and business environment.",
+    mi2_text:"Promoting Israel among the world's creative economy.",
+    why_label:"THE PAIN", why_all:"About us →",
     why1_tag:"PAIN", why1_text:"The state has not given a home to Russian-speaking entrepreneurs and their families.",
     why2_tag:"PAIN", why2_text:"There is no strong Russian-language media to honestly speak about Israel.",
-    why3_tag:"MISSION", why3_text:"Through supporting bloggers, build our own media and an honest voice about Israel.",
     join_label:"NOT A MEMBER YET?", join_big:"The community is already growing.", join_btn:"Join the association →", join_cap:"Community, 2026 [placeholder]",
     strip_text:"A blogger or creative economy professional in Israel? This is your place.", strip_btn:"Join now →",
     foot_copy:"© 2026 IIA — Israel Influence Association", foot_charter:"Charter", foot_contact:"Contact", foot_partners:"Partners"
